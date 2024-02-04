@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="blog.html">
+  </head>
+  <style>
+    .navlist{
+    display: flex;
+    gap: 3.5em;
+    position: fixed;
+    margin-bottom: 90px;
+    }
+    .navlist{
+    list-style: none;
+   
+     }
+    .navlist li a
+    {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    position: relative;
+    }
+    .navlist li a::after ,.navlist .active::after
+    {
+    content: "";
+    position: absolute;
+    background: #499305;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+    }
+    .navlist li a:hover::after,.navlist .active::after
+    {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    } 
+    .social-icons {
+        width: 4px;
+        height: 4px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 200px;
+      bottom: 20px;
+      left: 10px;
+      
+    }
+    .social-icons a {
+      margin-bottom: 10px;
+    }
+    .btn
+    {
+        padding-top: 19px;
+        color: black;
+        
+    }
+    .Hire
+    {
+        margin-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 11px;
+        padding-top:11px ;
+        font-family: Arial;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);        
+            cursor: pointer;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        background-color:#499305;  
+      color:whitesmoke;
+      opacity:0.5;
+    }
+    .Hire:hover
+    {
+      border-color: #499305;
+      /* color: grey; */
+      opacity:0.65;
+    }
+    .Hire:active{
+      opacity: 0.8;
+    }
+    .portf
+    {
+        margin-right: 10px;
+        padding-left: 10px ;
+        padding-right: 10px;
+        padding-bottom: 11px;
+        padding-top:11px ;
+        font-family: Arial;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(82, 179, 26, 0.9);
+        cursor: pointer;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        background-color:#499305;  
+      color:whitesmoke; 
+    opacity:0.5; }
+    .portf:hover
+    {
+      border-color: darkblue;
+      /* color: grey; */
+      opacity:0.65;
+    }
+    .portf:active{
+      opacity: 0.8;
+    }
+    .intro
+    {
+       display: inline-block;
+       /* color:#519214; */
+       color:black;
+       font-size: 50px;
+       text-align: left;
+       margin-top: 250px;
+       margin-bottom: 0;
+       font-weight: bold;
+    }
+    .name
+    {
+      /* color:#499305; */
+      color:black;
+      
+        opacity: 0; /* Initially set opacity to 0 */
+        animation: fadeInLetters 1.5s ease-out forwards 0.9s; /* Apply animation after a delay */
+       letter-spacing: 0.2em; /* Set initial letter spacing */
+    }
+    @keyframes fadeInLetters {
+  to {
+    opacity: 1;
+    letter-spacing: 0; /* Set final letter spacing */
+  }
+}
+    
+    .fade-in-text
+    {
+      /* color:#519214; */
+        font-size:25px;
+        margin-top: 10px;
+        color: white;
+        font-weight: normal;
+        color:black;
+    }
+    .fade-in-text span {
+      /* color:#519214; */
+      color:black;
+      opacity: 0;
+      display: inline-block;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .img
+    {
+        display: inline-block;
+        width: 300px;
+        text-align: right;
+        box-shadow: 0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #519214,
+    inset 0 0 2rem #519214,
+    0 0 4rem #519214,
+    inset 0 0 4rem #519214;
+    }
+    .picture .img {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 100%; /* Set initial position below the container */
+    left: 20%;
+    /* right:100%; */
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s ease;
+    animation: slideIn 1.5s ease-out forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+    to {
+        top: 70%; /* Set final position at the center */
+        left:30%;
+    }
+}
+.img:hover{
+    filter: sepia(50%);
+}
+.li{
+  color:black;
+}
+.list{
+  color:#519214;
+  font-weight: bold;
+  font-size: 18px;
+  
+}
+.logo{
+  height:50px;
+  margin-top:0;
+}
+.git,.insta,.linkedin,.reddit{
+  transition: opacity .4s;
+}
+.git:hover,.insta:hover,.linkedin:hover,.reddit:hover{
+  opacity:.5;
+}
+
+</style>
+  <body
+    style="
+      background-image: url('background6.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    ">
+<div>
+    
+  <ul class="navlist">
+    <li  ><a href="index.html" ><span class="list">Home</span></a></li>
+    <li ><a href="blog.html"><span class="list">Blog</span></a></li>
+    <li ><a href="blog.html"><span class="list">About</span></a></li>
+    <li ><a href="blog.html"><span class="list">Education</span></a></li>
+    <li ><a href="blog.html"><span class="list">Contact</span></a></li>
+<div class="left-container">
+    
+        <div class="content">
+            <p class="intro">Hi!  <span class="name"> I Am Aarush</span></p>
+        </div>
+        <div class="fade-in-text">
+            <span>A</span>
+            <span>Front-</span>
+            <span>End </span>
+            <span>Developer</span>
+        </div>
+        <div class="btn">
+            <button class="Hire">Hire Me</button>
+            <button class="portf">View Portfolio</button>
+        </div>
+</div>
+<div class="picture">
+    <img class="img" src="aarch1.jpeg" alt="">
+</div>
+<div class="social-icons">
+<div class="git">
+    <a href = "https://github.com/" >  <img  class = "icon" src="git.png" width="44px"></a>
+</div>
+
+<div class="insta">
+    <a href = "https://instagram.com/" >  <img class = "icon" src="instagram.webp" width="44px"> </a>
+</div>
+
+<div class="linkedin">
+    <a href = https://www.linked_in.com/ >  <img class = "icon" src="linked_in.webp" width="44px"> </a>
+</div>
+
+<div class="reddit">
+    <a href = https://www.reddit.com/ >  <img class = "icon" src="reddit.webp" width="44px"> </a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const words = document.querySelectorAll(".fade-in-text span");
+      let delay = 0;
+
+      words.forEach((word) => {
+        word.style.animationDelay = '${delay}s';
+        delay += 0.5; // Adjust the delay between words
+      });
+    });
+  </script>
+</div>
+</div>
+</body>
+</html>
